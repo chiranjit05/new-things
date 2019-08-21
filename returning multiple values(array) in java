@@ -1,0 +1,55 @@
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int row,col,i,j;
+		System.out.println("Enter the value of row : ");
+		row=sc.nextInt();
+		System.out.println("Enter the numbber of column : ");
+		col=sc.nextInt();
+		
+		System.out.println("Number of rows : "+row);
+		System.out.println("Number of column : "+col);
+		System.out.println("");
+		
+		int a[][] = new int[row][col];   // this is the declaration of the main sudoku matrix of row*col
+		
+		for(i=0;i<col;i++) //taking input of the main sudoku in the form of matrix 
+		{
+			for(j=0;j<row;j++)
+			{
+				a[i][j]= sc.nextInt();	
+			}
+			
+		}
+		
+		//Displaying the sudoku matrix just entered by thhe user
+		System.out.println("The sudoku matrix enterwd by u is : ");
+		
+		for(i=0;i<col;i++) //taking input of the main sudoku in the form of matrix 
+		{
+			for(j=0;j<row;j++)
+			{
+				System.out.print(a[i][j]+" ");	
+			}
+			System.out.print("\n");
+		}
+		
+		
+		
+		box_select(a);
+		//part_row_col()
+	
+	
+	} //end of the main function
+	
+	public static int[] box_select(int a[][]) // function that returns array 
+	{	Scanner sc= new Scanner(System.in);
+		System.out.println("you now have to enter the coordiante u wish to fill : ");
+		int r1,c1;
+		System.out.println("Enter the row : ");
+		r1=sc.nextInt();
+		System.out.println("Enter the column : ");
+		c1=sc.nextInt();
+		int []c= {r1,c1};
+		return c;
+		
+	}
